@@ -1,6 +1,6 @@
 # VX
 
-A free-to-use, standardized saving format for use in any Cell Machine remake.
+A standardized saving format for use in any Cell Machine remake.
 
 Standard is written in the STANDARD.md file.
 
@@ -8,6 +8,22 @@ Standard is written in the STANDARD.md file.
 
 The VX standard is specified in this repository, and was designed to work for any remake, while also allowing some levels to cleanly work between remakes (though with exceptions)
 
-# Free-to-use
+# Cross-Remake
 
-The license is currently not written, but, you are free to implement the VX saving format as well as make your own fork of it.
+With Standardized IDs, the saving format can work across multiple standard compliant remakes (as long as you are using standardized cells, in which case, it may not always work, unless that other remake has a preprocessor that can make it work).
+
+# Open-Minded
+
+You can request a change to the format (as long as its non-breaking) or extra standardized IDs 
+
+# Expandable
+
+VX supports:
+- Non-standardized cells to be saved
+- Extra layers
+- Data in placeables
+- Rotation of placeables
+- Data in cells
+- Infinite grids
+
+This does not mean that all remakes that implement VX support these, but it means that the saving format allows basically any remake to use it!
