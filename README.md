@@ -10,7 +10,7 @@ The VX standard is specified in this repository, and was designed to work for an
 
 # Cross-Remake
 
-With Standardized IDs, the saving format can work across multiple standard compliant remakes (as long as you are using standardized cells, in which case, it may not always work, unless that other remake has a preprocessor that can make it work).
+With Standardized IDs, the saving format can work across multiple standard compliant remakes (as long as you are using standardized cells, if not, it may not always work, unless that other remake has a preprocessor that can make it work).
 
 # Open-Minded
 
