@@ -76,7 +76,7 @@ A layer that is considered "useless" can optionally not be put there. If the amo
 
 Similar to the fixed-grid cell format, except at the start of the list is the x and y.
 
-### <grid data>
+### grid data
   
 This is a base64-encoded bytestream of a zlib-compressed json-encoded object.
   
@@ -86,12 +86,12 @@ This object should have 2 fields (though each one can be optionally not mentione
 
 If it is not mentioned, the default one is used, which has the defaults of those 2 fields.
 
-### <width>
+### width
 
 If empty, it means `100`.
 If not empty, it should be a raw number (no high bases, just the number) meaning the width of the grid if it is a fixed grid.
 
-### <height>
+### height
 
 If empty, it means that the fixed grid should be a square, and thus the height is equal to the width.
 If it is `=`, it means that the fixed grid should be a square, and thus the height is equal to the width.
