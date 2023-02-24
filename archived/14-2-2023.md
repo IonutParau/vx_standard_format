@@ -2,7 +2,7 @@
 
 The specification ID is meant to say which standard of VX you are using.
 Each standard is meant to be fully backwards compatible, but may not be fully forwards compatible.
-They are named after the date that the `STANDARD.md` file is updated to contain the new standard. (in `dd/mm/yyyy` format)
+They are named after the date that the `STANDARD.md` file is updated to contain the new standard. (in `dd-mm-yyyy` format)
 
 The current specification ID is `14-2-2023`.
 
