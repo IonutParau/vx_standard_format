@@ -80,7 +80,7 @@ This is a base64-encoded bytestream of a zlib-compressed json-encoded object.
   
 This object should have 2 fields (though each one can be optionally not mentioned and instead replaced with a default):
 - `A`, which is an indentifier for the remake that encoded this. Used for preprocessors (more on that later). Should default to the string `modularcm`.
-- `GT`, which meas grid-type. The string `fixed` means a fixed grid, while `dynamic` means a dynamic grid. It should default to `fixed`.
+- `GT`, which means grid-type. The string `fixed` means a fixed grid, while `dynamic` means a dynamic grid. It should default to `fixed`.
 
 If it is not mentioned, the default one is used, which has the defaults of those 2 fields.
 
