@@ -107,7 +107,7 @@ Some IDs are standardized and meant to be used across all remakes, and when enco
 
 If any of these IDs would conflict with a pre-existing cell in the remake that does something else, you must put for that ID a `@` at the start.
 
-An `@` at the start of the ID means that the ID is not standard, and thus the following characters must be turned into a character.
+An `@` at the start of the ID means that the ID is not standard, and thus the following characters must be turned into a raw ID used by the remake or to be pre-processed.
 
 Suppose `gen` already is taken and isn't the generator. In that case, you would save it as `@gen`. Then, when decoding, `@gen` would be converted to `gen`.
 
