@@ -6,6 +6,14 @@ This is the current progress on the next STANDARD.MD that adds some proposals.
 
 None yet.
 
+# Main changes
+
+- More standardized IDs
+- More explicit details of certain edge-cases
+- Standardized coordinate system for dynamic grids
+- Standardized order for fixed grids
+- Mentioning of custom data in the Grid Data.
+
 # Current details:
 
 # Structure
@@ -64,7 +72,7 @@ The id might be ahead-of-time translated to a standardized ID or to use the non-
 
 The rotation must be a number.
 
-The data must be an object.
+The data may be an object. If it is not an object, it is treated as an empty object.
 
 There are typically 2 layers: foreground and background.
 
@@ -72,9 +80,29 @@ This would mean that the cell is encoded as: `[foreground.id, foreground.rot, fo
 
 A layer that is considered "useless" can optionally not be put there. If the amount of layers minimum is not met, the unspecified layers are allowed to be treated as containing an empty cell.
 
+Please note: A cell can have as many layers as it wants! And different cells in different spots can have more layers than others!
+
 ### The cell format (for a cell on an infinite grid)
 
 Similar to the fixed-grid cell format, except at the start of the list is the x and y.
+
+### Coordinate system
+
+**Units of the position**
+
+The coordinate system expected by VX for dynamic grids is that both coordinates are integers (either negative, positive or 0).
+It is assumed to be in grid coordinates where every tile is 1 unit long.
+
+**Relative directions of the coordinate system**
+
+For now we will define x1, x2, y1, y2 as hypathetical positions of 2 cells (c1, which is at x1 y1, and c2, which is at x2 y2).
+
+If `x1 < x2`, that means that c1 is left of c2
+If `x1 > x2`, that means that c1 is right of c2
+If `y1 < y2`, that means that c1 is above c2
+If `y1 > y2`, that means that c1 is below c2
+
+If it is unclear why this is specified, some remakes like Mystic Mod use different coordinate systems that do have the same units, but different relative directions based off of the differences in said units. This means that a level saved in Mystic Mod, if no one accounts for this, would have some cells in the wrong places, effectively breaking the level. 
 
 ### grid data
   
@@ -85,6 +113,11 @@ This object should have 2 fields (though each one can be optionally not mentione
 - `GT`, which means grid-type. The string `fixed` means a fixed grid, `dynamic` means a dynamic grid, `fixed-hex` means fixed hexagon grid and `dynamic-hex` means dynamic hexagon grid. It should default to `fixed`.
 
 If it is not mentioned, the default one is used, which has the defaults of those 2 fields.
+
+The grid data can also have custom fields. These can mean extra information about the level.
+Custom data in the grid data is referred to as "level data".
+
+Level data is entirely up to the individual implementations whether they are supported and how well.
 
 ### A note on hexagon grids
 
@@ -148,3 +181,4 @@ The extended standardized IDs are:
 - `strong_enemy`, an enemy that when killed becomes a normal enemy.
 - `weak_enemy`, an enemy that when killed becomes the cell that killed it.
 - `driller`, the equivalent to Driller from CelLua
+- `balanced_enemy`, an enemy that when killed becomes a weak enemy
