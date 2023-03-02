@@ -95,7 +95,7 @@ It is assumed to be in grid coordinates where every tile is 1 unit long.
 
 **Relative directions of the coordinate system**
 
-For now we will define x1, x2, y1, y2 as hypathetical positions of 2 cells (c1, which is at x1 y1, and c2, which is at x2 y2).
+For now we will define x1, x2, y1, y2 as hypothetical positions of 2 cells (c1, which is at x1 y1, and c2, which is at x2 y2).
 
 If `x1 < x2`, that means that c1 is left of c2
 If `x1 > x2`, that means that c1 is right of c2
