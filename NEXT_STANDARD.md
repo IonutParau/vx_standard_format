@@ -165,7 +165,7 @@ The standardized IDs are:
 
 ## The extended Standardized IDs
 
-There are IDs of common cells that may not be implemented in all remakes
+There are IDs of common cells that may not be implemented in all remakes.
 These IDs are often requested by remake authors.
 If a remake that implements VX does not support a cell from this list, the standardized ID may be ignored by said remake.
 
