@@ -12,7 +12,9 @@ None yet.
 - More explicit details of certain edge-cases
 - Standardized coordinate system for dynamic grids
 - Standardized order for fixed grids
-- Mentioning of custom data in the Grid Data.
+- Mentioning of custom data in the Grid Data.\
+- Removed potential future ID conflicts
+- Standardized colors
 
 # Current details:
 
@@ -183,4 +185,9 @@ The extended standardized IDs are:
 Properties are special parts of a cell's data.
 
 There are some properties standardized for all cells (though may not be implemented in all remakes):
-- `@__color`, this should be a string containing the hexadecimal of an RGBA color.
+- `@__color`, this should be a string containing the hexadecimal of an RGBA color. (each letter can be uppercase or lowercase)
+    Example: `FFAEBC013`
+- `@__disguised`, this should be a string containing a VX ID which specifies the cell this should be disguised as.
+- `@__disguised_rot`, this is the rotation to disguise at. If not specified, the cell uses its own rotation.
+    If this value is between 0 to 3, the rotation is added on top of the current cell's rotation (with wrap-around) when rendering.
+    If this value is between -4 to -1, the cell is rendered with a rotation of `-x - 1`, where x is this value.
