@@ -49,7 +49,7 @@ When empty, it means the level has no description. When not empty, the content o
 
 ## cell data
 
-This is a base64-encoded bytestream of zlib-compressed json-encoded list of lists of objects representing the cells.
+This is a base64-encoded bytestream of zlib-compressed json-encoded list of lists representing the cells.
 
 If it is JSON-decoded into something other than a list of cells, it should be treated as if the cell data segment was not specified!
 
@@ -139,7 +139,9 @@ There should at least be one preprocessor however, and that is the Standardized 
 # Standardized IDs
 
 Some IDs are standardized. Those must be stored as raw text.
-If not, you can store them with an `@` at the start.
+If the cell you're tring to store is not a standardized cell, you can store them with an `@` at the start.
+
+For legacy reasons you may make invalid standardized IDs be used as raw IDs.
 
 The standardized IDs are:
 - `mover`, it means the default mover
@@ -175,3 +177,10 @@ The extended standardized IDs are:
 - `balanced_enemy`, an enemy that when killed becomes a weak enemy
 - `player`, a push cell that can be moved by WASD, where W makes it go up, A makes it go to the left, D makes it go to the right, S makes it go down.
 - `rotational_player`, like `player`, but the directions it moves in. A rotation of 0 makes it go just like `player`.
+
+# Standardized Properties
+
+Properties are special parts of a cell's data.
+
+There are some properties standardized for all cells (though may not be implemented in all remakes):
+- `@__color`, this should be a string containing the hexadecimal of an RGBA color.
