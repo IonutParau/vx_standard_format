@@ -23,7 +23,7 @@ The structure of the level is like this: `VX;<title?>;<description?>;<cell data?
 
 # A note on those ending with a ?
 
-The "segments" (parts seperated by `;`) that end with a `?>` mean that they are option, and may be empty.
+The "segments" (parts seperated by `;`) that end with a `?` mean that they are optional, and may be empty.
 Each segment's definition should represent what happens when the segment is empty.
 
 # A note on trailing ;
@@ -182,3 +182,5 @@ The extended standardized IDs are:
 - `weak_enemy`, an enemy that when killed becomes the cell that killed it.
 - `driller`, the equivalent to Driller from CelLua
 - `balanced_enemy`, an enemy that when killed becomes a weak enemy
+- `player`, a push cell that can be moved by WASD, where W makes it go up, A makes it go to the left, D makes it go to the right, S makes it go down.
+- `rotational_player`, like `player`, but the directions it moves in. A rotation of 0 makes it go just like `player`.
