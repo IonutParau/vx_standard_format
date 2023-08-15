@@ -119,10 +119,6 @@ Custom data in the grid data is referred to as "level data".
 
 Level data is entirely up to the individual implementations whether they are supported and how well.
 
-### A note on hexagon grids
-
-Hexagonal grids use hexagonal tiling. To standardize this
-
 ### width
 
 If empty, it means `100`.
@@ -142,13 +138,8 @@ There should at least be one preprocessor however, and that is the Standardized 
 
 # Standardized IDs
 
-Some IDs are standardized and meant to be used across all remakes, and when encoded, have their respective internal IDs converted to these standardized ones.
-
-If any of these IDs would conflict with a pre-existing cell in the remake that does something else, you must put for that ID a `@` at the start.
-
-An `@` at the start of the ID means that the ID is not standard, and thus the following characters must be turned into a raw ID used by the remake or to be pre-processed.
-
-Suppose `gen` already is taken and isn't the generator. In that case, you would save it as `@gen`. Then, when decoding, `@gen` would be converted to `gen`.
+Some IDs are standardized. Those must be stored as raw text.
+If not, you can store them with an `@` at the start.
 
 The standardized IDs are:
 - `mover`, it means the default mover
