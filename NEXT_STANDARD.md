@@ -111,9 +111,9 @@ If it is unclear why this is specified, some remakes like Mystic Mod use differe
 This is a base64-encoded bytestream of a zlib-compressed json-encoded object.
   
 This object should have 2 fields (though each one can be optionally not mentioned and instead replaced with a default):
-- `A`, which is an indentifier for the remake that encoded this. Used for preprocessors (more on that later). Should default to the string `modularcm`.
+- `A`, which is an indentifier for the remake that encoded this. Used for preprocessors (more on that later).
 - `GT`, which means grid-type. The string `fixed` means a fixed grid, `dynamic` means a dynamic grid, `fixed-hex` means fixed hexagon grid and `dynamic-hex` means dynamic hexagon grid. It should default to `fixed`.
-- `P` is the stadnard, from the `archived` folder, that was used to make it. This can be used for backwards compatibility. If it's missing, assume it was made with `NEXT_STANDARD`. To use the standard archived on February 14, 2023, it would be set to `14-2-2023`.
+- `P` is the standard, from the `archived` folder, that was used to make it. This can be used for backwards compatibility. If it's missing, assume it was made with `NEXT_STANDARD`. To use the standard archived on February 14, 2023, it would be set to `14-2-2023`.
 
 If it is not mentioned, the default one is used, which has the defaults of those 2 fields.
 
@@ -180,6 +180,8 @@ The extended standardized IDs are:
 - `balanced_enemy`, an enemy that when killed becomes a weak enemy
 - `player`, a push cell that can be moved by WASD, where W makes it go up, A makes it go to the left, D makes it go to the right, S makes it go down.
 - `rotational_player`, like `player`, but the directions it moves in are rotated by the player's rotations (clockwise). A rotation of 0 makes it go just like `player`.
+- `controllable_mover`, it `mover` but its direction is set based on the WASD keys, where W is up, A is left, S is down, D is right.
+- `slam_player`, like `player`, but it moves repeatedly until something stops it. Essentially, it moves as many tiles as it can.
 
 # Standardized Properties
 
