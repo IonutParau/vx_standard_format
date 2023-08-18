@@ -183,7 +183,7 @@ The extended standardized IDs are:
 - `rotational_player`, like `player`, but the directions it moves in are rotated by the player's rotations (clockwise). A rotation of 0 makes it go just like `player`.
 - `controllable_mover`, it `mover` but its direction is set based on the WASD keys, where W is up, A is left, S is down, D is right.
 - `slam_player`, like `player`, but it moves repeatedly until something stops it. Essentially, it moves as many tiles as it can.
-- `180_rotator`, 180-degree rotator. A rotator that rotates the cells by 180-degrees.
+- `rot_180`, 180-degree rotator. A rotator that rotates the cells by 180-degrees.
 - `bomb_3`, a trash cell that destroys a 3x3 area around it, with it at the center.
 
 # Standardized Properties
