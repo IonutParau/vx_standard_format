@@ -113,7 +113,7 @@ This is a base64-encoded bytestream of a zlib-compressed json-encoded object.
   
 This object should have 2 fields (though each one can be optionally not mentioned and instead replaced with a default):
 - `A`, which is an indentifier for the remake that encoded this. Used for preprocessors (more on that later).
-- `GT`, which means grid-type. The string `fixed` means a fixed grid, `dynamic` means a dynamic grid, `fixed-hex` means fixed hexagon grid and `dynamic-hex` means dynamic hexagon grid. It should default to `fixed`.
+- `GT`, which means grid-type. The string `fixed` means a fixed grid, `dynamic` means a dynamic grid.
 - `P` is the standard, from the `archived` folder, that was used to make it. This can be used for backwards compatibility. If it's missing, assume it was made with `NEXT_STANDARD`. To use the standard archived on February 14, 2023, it would be set to `14-2-2023`.
 
 If it is not mentioned, the default one is used, which has the defaults of those 2 fields.
