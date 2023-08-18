@@ -185,6 +185,7 @@ The extended standardized IDs are:
 - `slam_player`, like `player`, but it moves repeatedly until something stops it. Essentially, it moves as many tiles as it can.
 - `rot_180`, 180-degree rotator. A rotator that rotates the cells by 180-degrees.
 - `bomb_3`, a trash cell that destroys a 3x3 area around it, with it at the center.
+- `diagonal_mover`, a mover that moves diagonally. It moves in the same direction as the normal mover, minus 45 degrees.
 
 # Standardized Properties
 
